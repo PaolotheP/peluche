@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Avventura Galattica</title>
     <style>
-        /* Imposta lo sfondo spaziale animato */
+        /* Sfondo spaziale con una nuova GIF */
         body {
             margin: 0;
             padding: 0;
@@ -58,7 +58,7 @@
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
         }
 
-        /* Stelle animate */
+        /* Stelle animate con nuova GIF */
         .stars {
             position: absolute;
             top: 0;
@@ -66,18 +66,41 @@
             width: 100%;
             height: 100%;
             z-index: 1;
-            background: url('https://media.giphy.com/media/3oriO0OEd9QIDdllqo/giphy.gif') repeat;
+            background: url('https://media.giphy.com/media/f1U4In9HwQ5z3cJlPr/giphy.gif') repeat;
             background-size: cover;
             opacity: 0.8;
-            animation: moveStars 20s linear infinite;
         }
 
-        @keyframes moveStars {
-            0% { transform: translateY(0); }
-            100% { transform: translateY(-1000px); }
+        @keyframes slideDown {
+            0% {
+                transform: translateY(-100%);
+            }
+            100% {
+                transform: translateY(0);
+            }
         }
 
-        /* Pianeti */
+        /* Tendina blu animata */
+        .tendina {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 150px;
+            background: #004e92;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+            z-index: 20;
+            animation: slideDown 1.5s ease-out forwards;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .tendina img {
+            height: 80px;
+        }
+
+        /* Pianeti decorativi */
         .planet {
             position: absolute;
             border-radius: 50%;
@@ -88,8 +111,8 @@
         .planet-1 {
             width: 80px;
             height: 80px;
-            top: 10%;
-            left: 20%;
+            top: 20%;
+            left: 10%;
         }
 
         .planet-2 {
@@ -105,6 +128,11 @@
     <div class="stars"></div>
     <div class="planet planet-1"></div>
     <div class="planet planet-2"></div>
+
+    <!-- Tendina blu con logo -->
+    <div class="tendina">
+        <img src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.freepik.com%2Fpremium-vector%2Fnld-logo-nld-letter-nld-letter-logo-design-initials-nld-logo-linked-with-circle-uppercase-monogram-logo-nld-typography-technology-business-real-estate-brand_155620726.htm&psig=AOvVaw1qCEaN0OWx4n2-q3mHa4lZ&ust=1736188988145000&source=images&cd=vfe&opi=89978449&ved=0CBEQjRxqFwoTCOC5tpye34oDFQAAAAAdAAAAABAJ" alt="Logo Azienda">
+    </div>
 
     <div class="container">
         <h1>Avventura Galattica!</h1>
