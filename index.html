@@ -10,7 +10,7 @@
             margin: 0;
             padding: 0;
             font-family: 'Comic Sans MS', cursive, sans-serif;
-            background: url('https://images.unsplash.com/photo-1518780664697-55e3ad937233?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80') no-repeat center center fixed;
+            background: url('https://usagif.com/wp-content/uploads/gifs/starfall-gif-46.gif') no-repeat center center fixed;
             background-size: cover;
             color: #ffffff;
             display: flex;
@@ -22,11 +22,12 @@
         .container {
             text-align: center;
             background: rgba(0, 0, 0, 0.8); /* Maggiore contrasto per leggibilità */
-            padding: 20px;
+            padding: 30px;
             border-radius: 15px;
             box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
-            max-width: 600px;
+            max-width: 500px; /* Ristretto in larghezza */
             width: 90%;
+            min-height: 450px; /* Aumentata l'altezza */
         }
 
         h1 {
@@ -58,16 +59,26 @@
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
         }
 
-        .stars {
+        /* Piccolo box per il logo */
+        .logo-box {
             position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: url('https://usagif.com/wp-content/uploads/gifs/starfall-gif-46.gif') repeat;
-            background-size: cover;
-            z-index: -1;
-            opacity: 0.85; /* Migliorata l'integrazione con il testo */
+            top: 10px;
+            right: 10px;
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 10px;
+            padding: 5px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            width: 60px;
+            height: 60px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .logo-box img {
+            max-width: 100%;
+            max-height: 100%;
+            border-radius: 5px;
         }
 
         /* Ottimizzazione per dispositivi mobili */
@@ -86,6 +97,10 @@
             iframe {
                 max-height: 250px;
             }
+            .container {
+                min-height: 400px;
+                max-width: 90%;
+            }
         }
 
         @media (max-width: 480px) {
@@ -97,11 +112,20 @@
                 font-size: 0.9rem;
                 margin-bottom: 12px;
             }
+            .container {
+                min-height: 350px;
+            }
         }
     </style>
 </head>
 <body>
     <div class="stars"></div>
+
+    <!-- Box per il logo -->
+    <div class="logo-box">
+        <img src="https://scontent.fbri4-1.fna.fbcdn.net/v/t39.30808-6/398589326_735036251995725_397672061231774986_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=a5f93a&_nc_ohc=oHwbAHLTVBoQ7kNvgFiR9J4&_nc_zt=23&_nc_ht=scontent.fbri4-1.fna&_nc_gid=AEX4ay-U25MuNnDytsr6WVO&oh=00_AYAxePsJ7yeX5fnCNOS-wn7W8lg1R9gbAWAnwAA2mhq5bw&oe=6781AA64" alt="Logo Azienda">
+    </div>
+
     <div class="container">
         <h1>Avventura Galattica!</h1>
         <p>Segui il nostro piccolo alieno mentre attraversa la Via Lattea per visitare il nostro pianeta!</p>
